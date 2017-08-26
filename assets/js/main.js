@@ -65,7 +65,7 @@ function generateLoss() {
 }
 
 function generateHTML() {
-	gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>30</span></p><p class='text-center'>" + questionArray[questionCounter] + "</p><p class='first-answer answer'>A. " + answerArray[questionCounter][0] + "</p><p class='answer'>B. "+answerArray[questionCounter][1]+"</p><p class='answer'>C. "+answerArray[questionCounter][2]+"</p><p class='answer'>D. "+answerArray[questionCounter][3]+"</p>";
+	gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>20</span></p><p class='text-center'>" + questionArray[questionCounter] + "</p><p class='first-answer answer'>A. " + answerArray[questionCounter][0] + "</p><p class='answer'>B. "+answerArray[questionCounter][1]+"</p><p class='answer'>C. "+answerArray[questionCounter][2]+"</p><p class='answer'>D. "+answerArray[questionCounter][3]+"</p>";
 	$(".mainArea").html(gameHTML);
 }
 
@@ -73,7 +73,7 @@ function wait() {
 	if (questionCounter < 7) {
 	questionCounter++;
 	generateHTML();
-	counter = 30;
+	counter = 20;
 	timerWrapper();
 	}
 	else {
@@ -105,14 +105,14 @@ function resetGame() {
 	correctTally = 0;
 	incorrectTally = 0;
 	unansweredTally = 0;
-	counter = 30;
+	counter = 20;
 	generateHTML();
 	timerWrapper();
 }
 
 var startScreen;
 var gameHTML;
-var counter = 30;
+var counter = 20;
 var questionArray = ["What is the capital of Brazil?", "What is the capital of Venezuela?", "What is the capital of Peru?", "What is the capital of Chile?", "What is the capital of Bolivia?", "What is the capital of Ecuador?", "What is the capital of Colombia?", "What is the capital of Argentina?"];
 var answerArray = [["Brasilia", "Sao Paulo", "Rio de Janeiro", "Manaus"], ["Margarita","Caracas","Macarey","Valencia"], ["Iquitos", "Cusco", "Lima", "Piura"], ["Temuco","Viña del Mar","Santiago","San Bernardo"], ["Montero", "Sacaba", "El Alto", "Sucre"], ["Quito","Cuenca","Manto","Loja"], ["Medellin", "Bogota", "Cartagena", "Cali"], ["Mar del Plata","Salta","Santa Fe","Buenos Aires"]];
 var imageArray = ["<img class='center-block img-right' src='img/australia.png'>", "<img class='center-block img-right' src='img/liberia.png'>", "<img class='center-block img-right' src='img/taiwan.png'>", "<img class='center-block img-right' src='img/japan.png'>", "<img class='center-block img-right' src='img/china.png'>", "<img class='center-block img-right' src='img/turkey.png'>", "<img class='center-block img-right' src='img/colombia.png'>", "<img class='center-block img-right' src='img/india.png'>"];
